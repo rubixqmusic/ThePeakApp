@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        {% block head %}
+        <title>{% block title %}{% endblock %} - 28.9 The Peak</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="A Buttfuckin' Good Time">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/thepeakblue.ico') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% endblock %}
+    </head>
+
+    
+
+    <body>
+
+        <div class="main-header">
+                {% block header %}
+                <div><a href="/"><img src="{{url_for('static', filename='images/thepeak.png')}}" class="header-image"></a></div>
+
+                <div>
+                <ul class="nav-links-container" id="nav-links">
+                    <li class="nav-link"><h2><a href="/">Home</a></h2></li>
+                    <li class="nav-link"><h2><a href="/archive">Archive</a></h2></li>
+                    <li class="nav-link"><h2><a href="/about">About</a></h2></li>
+                    <li class="nav-link"><h2><a href="/thank-you">Thank You</a></h2></li>
+                </ul>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" id="mobile-menu">
+                    <i class="fa fa-bars fa-2x"></i>
+                </a>
+                {% endblock %}
+        </div>
+
+        <div id="content">{% block content %}{% endblock %}</div>
+
+        <div class="main-footer"> 
+        {% block footer %}
+        <div>
+        <br>
+        <h2 class="footer-text">Always On. Always</h2>
+        <h3>Copyright 2021 28.9 The Peak</h3>
+        <br>
+        </div>
+        {% endblock %}
+        </div> 
+
+        <script>
+            function toggleMenu() {
+              var x = document.getElementById("nav-links");
+              if (x.style.display === "flex") {
+                x.style.display = "none";
+              } else {
+                x.style.display = "flex";
+              }
+            }
+            </script>
+    </body>
+
+    
+
+    
+
+</html>

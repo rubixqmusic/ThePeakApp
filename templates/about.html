@@ -1,0 +1,347 @@
+{% extends "layout.html" %}
+{% block title %} About {% endblock %}
+{% block head %} 
+{{ super() }}
+{% endblock %}
+
+{% block header %} 
+{{ super() }}
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+
+        body {
+          margin: 0;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        .slideshow-container {
+          position: relative;
+        }
+        
+        .slide-images    {
+          display: none;
+        }
+
+        .slideshow-image {
+          align-self: center;
+          justify-self: center;
+          max-width: 90%;
+          margin-left: 5%;
+        }
+        
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          margin-left: 5%;
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          background-color: rgba(7, 95, 228, 0.26);
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          margin-right: 5%;
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-family: PixelTimes;
+          font-weight: inherit;
+          background-color: rgba(143, 143, 143, 0.534);
+          font-size: 22px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+          margin-left: 5%;
+        }
+        
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          padding: 2px 16px;
+          color: white;
+        }
+        </style>
+        <div class="content-container">
+                <div class="text-container">
+                <h1 class="h1-blue">About This Project</h1>
+                </div>
+
+                <div class="text-container">
+                <h3 class="h3-blue">The purpose of this project is to restore and archive as much information as possible about a local channel that apparently never existed</h3>   
+                </div>
+
+                <div class="content-box">
+                        <div></div>
+
+                        <div>
+                        <h2>Background</h2>
+                        </div>
+
+                        <h3 class="normal-text">My name is Alex, I live in Tucson, Arizona. In my spare time, I enjoy tinkering with old electronics and computers. Recently, a friend of mine had a relative who passed away. In the process of cleaning out their relatives house, they found several boxes full of random assorted electronics, documents, and reel to reel tapes. Since they didn’t have a use for any of it, they asked me if I wanted to take a look at it, and out of curiosity I said yes.</h3>
+                    </div>
+
+                <div class="content-box">
+                        <div></div>
+
+                        <div>
+                        <h2>The Boxes</h2>
+                        </div>
+
+                        <br>
+
+                        <img class="content-image" src="{{url_for('static', filename='images/boxes.png')}}">
+                        <h3 class="image-caption-text">what's in these things?</h3>
+
+                        <br>
+
+                        <h3 class="normal-text">So, there are 3 boxes in total. They contain some interesting old electronic devices, random papers and assorted documents, and a bunch of tape reels. I’ve skimmed through the boxes, and based on the content of some of the documents I’ve looked at and the labels on the boxes and tapes, it looks as if this stuff is from an old TV station.
+                        </h3>
+                        <h3 class="normal-text">It looks like the channel was called “The Peak,” and broadcast on channel 28.9 from Luna Valley, AZ. This is odd, because Luna Valley isn’t a town or area in Arizona. When I first saw this town name on the boxes, I thought it might be a mistake and someone was erroneously referring to somewhere like Oro Valley or Green Valley, both of which are areas just around Tucson, but after looking through the contents in the boxes, it does look as if this station was based in Luna Valley. I also could not find any reference to any town in Arizona called Luna Valley on the internet, or in local public records, nor could I find any info about a channel called ‘The Peak’ that ever broadcast in Arizona.
+                        </h3>
+
+                </div>
+
+                <div class="content-box">
+                        <div></div>
+
+                        <div>
+                        <h2>The Documents</h2>
+                        </div>
+
+                        <div class="slideshow-container">
+                                <div class="slide-images">
+                                        <div class="numbertext">1 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/pizza invoice.jpg')}}" alt="An invoice for some pizza restaurant">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">2 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/mem 1.jpg')}}" alt=" ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">3 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/mem 2.jpg')}}" alt=" ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">4 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/mem 3.jpg')}}" alt=" ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">5 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/mem 4.jpg')}}" alt=" ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">6 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/news script 2.jpg')}}" alt="a copy of what looks to be a news script ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">7 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/news script 1.jpg')}}" alt=" ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">8 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/mem 5.jpg')}}" alt=" ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">9 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/mem 6.jpg')}}" alt=" ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">10 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/mem 7.jpg')}}" alt=" ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">11 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/mem 8.jpg')}}" alt=" ">
+                                </div>
+
+                                <div class="slide-images">
+                                        <div class="numbertext">12 / 12</div>
+                                        <img class="slideshow-image" style="width:100%" src="{{url_for('static', filename='images/press release.jpg')}}" alt=" ">
+                                </div>
+                        
+                                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                <a class="next" onclick="plusSlides(1)">❯</a>
+                              
+                                <div class="caption-container">
+                                  <p class="image-caption-text" id="caption"></p>
+                                </div>
+                        </div>
+
+                        <h3 class="normal-text">I haven’t really had time to look at too many of the papers and documents inside the boxes. Mostly because I’m more interested in what’s on the tapes, but also because of time constraints. From what I’ve looked at so far, a lot of the documents are internal paperwork, like programming schedules, news scripts, and other assorted memos. There are a few invoices for things like catering and repairs from local businesses in Luna Valley but I can’t find information about them anywhere.
+                        </h3>
+                </div>
+
+                <div class="content-box">
+                        <div></div>
+
+                        <div>
+                        <h2>The Electronics</h2>
+                        </div>
+
+                        <br>
+
+                        <img class="content-image" src="{{url_for('static', filename='images/electronics.png')}}">
+                        <h3 class="image-caption-text">what does this stuff even do?</h3>
+
+                        <br>
+
+                        <h3 class="normal-text">These boxes are full of random assorted electronic devices. There’s a bunch of really cool old stuff in here, but I’m honestly not even sure what a lot of it does. It looks like a bunch of old Phone Company equipment, most likely for networking and data processing. There are also tons of circuit boards that look like they’ve been hacked. I think my friends relative was probably messing around with some of the hardware and reverse engineering it.
+                        </h3>
+                </div>
+
+                <div class="content-box">
+                        <div></div>
+
+                        <div>
+                        <h2>The Tapes</h2>
+                        </div>
+
+                        <br>
+
+                        <img class="content-image" src="{{url_for('static', filename='images/tapes.png')}}">
+                        <h3 class="image-caption-text">the tapes</h3>
+
+                        <br>
+
+                        <h3 class="normal-text">Okay, so my initial thought when I saw the tapes was that they were audio tapes and probably contained the sound segments of broadcasts, but upon further inspection, I realized they are actually data tapes. All of the tapes appear to be sequentially numbered, starting at tape #0000. It looks like there were 34 tapes in total, but tapes #0015, #0022 and #0023 are missing. Each tape can hold 500 Gb of data, a very large amount for when these were probably made.
+                        </h3>
+                        <h3 class="normal-text">Data tapes don’t store information on a tape sequentially. They use specialised machines capable of reading and writing data at various points along the tape. One file, for instance, may be spread out across multiple blocks that are located on various parts of the tape. Since the only reel to reel tape player I have is a standard player which isn’t capable of reading and seeking data, before I can do anything, I have to play the tape from beginning to end to record the data as an audio stream on a computer. Once the stream is recorded, I can convert that stream into binary data that can be scanned for file signatures to piece together what was originally on the tapes.
+                        </h3>
+                        <h3 class="normal-text">My first attempt to scan for files in the data recovered from the first tape was unsuccessful. It appeared to be encoded in a nonstandard format, and repeated scans for different file types and signatures yielded nothing. However, to my surprise, buried within the boxes were several installation CDs for several internal software tools made by The Phone Company that operated data management systems. One of these tools was specifically for data recovery, which was awesome.
+                        </h3>
+
+                        <br>
+
+                        <img class="content-image" src="{{url_for('static', filename='images/data buddy.png')}}">
+                        <h3 class="image-caption-text">obsolete software to the rescue!</h3>
+
+                        <br>
+
+                        <h3 class="normal-text">One problem though, the program could only run on an extremely outdated operating system. I tried running it on a virtual machine, but had no luck. The software just errored out every time it attempted to scan the data. In a last ditch attempt to try and recover at least some of what is on these tapes, I fired up a 20 year old computer I have lying around, and did a fresh install of the OS and recovery software. To my amazement, it worked and was able to start locating various files from within the blob of data captured from the tape, albeit at an extremely slow pace. So until I’m able to get my hands on more effective equipment, the current workflow to extract data from these tapes is:
+                        </h3>
+                        <ol type="1" class="normal-text" style="margin-left: 5%; margin-right: 5%;">
+                                <li>Playback the tape in its entirety and record the output as an audio file</li>
+                                <li>Trim the audio file and export it as binary data to an external hard drive</li>
+                                <li>Connect the external hard drive to a 20 year old computer running outdated software</li>
+                                <li>Allow the software to scan the data on the drive and dump any files it finds into a separate external hard drive</li>
+                                <li>Rinse and repeat</li>
+                        </ol>
+
+                        <img class="content-image" src="{{url_for('static', filename='images/computer desktop.png')}}">
+                        <h3 class="image-caption-text">The pinnacle of modern technology</h3>
+
+                        <br>
+
+                </div>
+
+                <div class="content-box">
+                        <div></div>
+
+                        <div>
+                        <h2>So What’s On The Tapes?</h2>
+                        </div>
+
+                        <br>
+
+                        <img class="content-image" src="{{url_for('static', filename='images/computer desktop 2.png')}}">
+                        <h3 class="image-caption-text">I feel like I've seen this image before</h3>
+
+                        <br>
+
+                        <h3 class="normal-text">Most of the data on the first two tapes I've dumped is unrecoverable garbage, probably due to fragmentation. A lot of it also appears to be database information and backups. There are, however, multiple memos, text files, images, and videos that I've found. So far, most of the videos appear to be commercials, but there are a couple segments from shows. There also appears to be a lot of security camera footage, which I hope to take a look at in time. Scanning the contents of each tape takes about 5-6 days on this old hardware, and that’s if it doesn’t throw an error and abort the scan, so I’ll upload new finds as I can. 
+                        </h3>
+                </div>
+
+                <div class="content-box">
+                        <div></div>
+
+                        <div>
+                        <h2>My Thoughts</h2>
+                        </div>
+
+                        <h3 class="normal-text">Tbh, it’s hard to tell if any of this is <span style="color: limegreen;">real </span>or one big hoax. The fact that there’s no information at all on a town called Luna Valley in Arizona, or any record of 28.9 the peak ever existing has part of me thinking this might all be made up. But at the same time, the idea that someone would make boxes full of fake documents and hardware, and also fill up terabytes of data tapes as a hoax seems pretty implausible. So, until I find out otherwise, my main goal will be recovering, cataloging, and organizing as much information about 28.9 The Peak and Luna Valley as much as possible. Thanks for checking out the project. I’ll post updates when I can
+ 
+                        </h3>
+                </div>
+
+                <div class="content-box">
+                        <div></div>
+                        <div>
+                        <h2 class="link"><a href="/">Home</a></h2>
+                        </div>
+                        <div></div>
+                </div>
+
+
+
+        </div>
+
+        <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("slide-images");
+                  var imageCaption = document.getElementsByClassName("slideshow-image");
+                  var captionText = document.getElementById("caption");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  captionText.innerHTML = imageCaption[slideIndex-1].alt;
+                }
+        </script>
+
+{% endblock %}
+
+{% block footer %} 
+{{ super() }}
+{% endblock %}

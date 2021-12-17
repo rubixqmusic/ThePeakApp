@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Was Bappinin'?</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="A Buttfuckin' Good Time">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+
+    <header class="main-header">
+        <a href="/"><img src="{{url_for('static', filename='css/thepeak.png')}}" class="header-image"></a> 
+        <h1 class="header-text">This is a Johnny Rubix Test Page</h1>
+    </header>
+
+    <body>
+
+        <div class="small-spacer"></div>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="flashed-message">{{ message }}</p>
+                 {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="small-spacer"></div>
+        
+        <div class="sign-in-form">
+            <form action="greet" method="post">
+                <h2>Sign up for some email stuff!</h2>
+                <br>
+                <input type="text" id="name_input" name="name" placeholder="Name (Required)" class="input-box" required>
+                <br>
+                <input type="email" id="email_input"  name="email" placeholder="Email (Required)" class="input-box" required>
+                <br>
+                <input type="submit" value="submit" class="submit-button">
+            </form>
+        </div>
+
+        <div class="small-spacer"></div>
+        <div class="small-spacer"></div>
+
+    </body>
+
+    <footer class="main-footer">                       
+                <h2 class="footer-text">This is a footer</h2> 
+                <img src="{{url_for('static', filename='css/thepeak.png')}}" class="footer-image">          
+    </footer>
+
+</html>
