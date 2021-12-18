@@ -48,7 +48,7 @@ footer {
 
 /*Styling For Mobile*/
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .main-header {
         display: flex;
         flex-flow: column nowrap;
