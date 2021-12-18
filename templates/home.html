@@ -1,5 +1,13 @@
 {% extends "layout.html" %}
 {% block title %} Home {% endblock %}
+
+{% block opengraph %}
+    <meta property="og:url" content="https://www.289thepeak.com"/>
+    <meta property="og:title" content="28.9 The Peak Archival Restoration Project"/>
+    <meta property="og:description" content="Archiving the remnants of a channel that never existed"/>
+    <meta property="og:image" content="{{url_for('static', filename='images/thepeakblue.png')}}"/>
+{% endblock %}
+
 {% block head %} 
 {{ super() }}
 {% endblock %}
