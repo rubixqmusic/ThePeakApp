@@ -6,10 +6,8 @@
         <title>{% block title %}{% endblock %} - 28.9 The Peak</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:url" content="https://www.289thepeak.com"/>
-        <meta property="og:title" content="28.9 The Peak Archival Restoration Project"/>
-        <meta property="og:description" content="Archiving the remnants of a channel that never existed"/>
-        <meta property="og:image" content="{{url_for('static', filename='images/thepeakblue.png')}}"/>
+        {% block opengraph %}
+        {% endblock %}
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
         <link rel="shortcut icon" href="{{ url_for('static', filename='images/thepeakblue.ico') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
