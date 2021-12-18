@@ -48,7 +48,7 @@ footer {
 
 /*Styling For Mobile*/
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     .main-header {
         display: flex;
         flex-flow: column nowrap;
@@ -116,7 +116,7 @@ footer {
 
 /*Styling For Desktop*/
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 800px) {
     .main-header {
         display: flex;
         flex-wrap: wrap;
