@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 {% block title %} Home {% endblock %}
+
+{% block opengraph %}
+<meta property="og:url" content="http://www.289thepeak.com/archive/batch-0001"/>
+<meta property="og:title" content="Batch 0001"/>
+<meta property="og:description" content="the first batch of uploads"/>
+<meta property="og:image" content="http://www.289thepeak.com/static/images/thepeak-og.png"/>
+<meta property="og:type" content="website"/>           
+{% endblock %}
+
 {% block head %} 
 {{ super() }}
 {% endblock %}

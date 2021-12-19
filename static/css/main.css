@@ -216,8 +216,8 @@ link   {
     background-color: rgba(24, 102, 248, 0.527);
     position: relative;
     bottom: 0;
-    left: 0;
-    right: 0;
+    /*left: 0;
+    right: 0;*/
     border-top: 2px solid rgb(9, 3, 58);
     border-radius: 10px;
     align-items: center;
@@ -332,6 +332,7 @@ body {
     align-content: center;
     min-height: 100%;
     background: white;
+
 }
 
 #content {

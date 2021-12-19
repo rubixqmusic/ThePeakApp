@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 {% block title %} Home {% endblock %}
+
+{% block opengraph %}
+<meta property="og:url" content="http://www.289thepeak.com/thank-you"/>
+<meta property="og:title" content="Thank You"/>
+<meta property="og:description" content="Special thank you to our sponsors who help keep this project alive"/>
+<meta property="og:image" content="http://www.289thepeak.com/static/images/thepeak-og.png"/>
+<meta property="og:type" content="website"/>           
+{% endblock %}
+
 {% block head %} 
 {{ super() }}
 {% endblock %}

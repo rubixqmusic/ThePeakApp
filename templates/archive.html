@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 {% block title %} Home {% endblock %}
+
+{% block opengraph %}
+<meta property="og:url" content="http://www.289thepeak.com/archive"/>
+<meta property="og:title" content="28.9 The Peak - Archive"/>
+<meta property="og:description" content="each batch of uploads is archived in the order it was recovered"/>
+<meta property="og:image" content="http://www.289thepeak.com/static/images/thepeak-og.png"/>
+<meta property="og:type" content="website"/>           
+{% endblock %}
+
 {% block head %} 
 {{ super() }}
 {% endblock %}
@@ -17,6 +26,8 @@
             <h2 class="h2-blue">each batch of uploads is archived in the order it was recovered</h2>
             </div>
 
+            <div class="small-spacer"></div>
+
             <div class="content-box">
 
                 <div></div>
@@ -27,6 +38,8 @@
         
         </div>
 
+        <div class="small-spacer"></div>
+        <div class="small-spacer"></div>
         <div class="small-spacer"></div>
         <div class="small-spacer"></div>
         <div class="small-spacer"></div>
